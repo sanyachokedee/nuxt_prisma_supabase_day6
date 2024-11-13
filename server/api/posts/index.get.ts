@@ -26,7 +26,10 @@ export default defineEventHandler(async (event) => {
             id: true,
             title: true,
             content: true,
-            published: true
+            published: true,
+            authorId: true,
+            createdAt: true,
+            updatedAt:true
         },
         orderBy: {
             id: 'desc'    // เรียงลำดับจากมากไปน้อย

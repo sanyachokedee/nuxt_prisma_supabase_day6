@@ -1,12 +1,12 @@
 <script setup lang="ts">
 
-    const posts = ref([
-        { id: 1, title: 'First Post', published: true, author: 'John Doe', createdAt: '2024-01-01' },
-        { id: 2, title: 'Second Post', published: false, author: 'Jane Smith', createdAt: '2024-01-02' },
-        // เพิ่มข้อมูลตัวอย่างเพิ่มเติมได้        
-    ])
-
-
+    // const posts = ref([
+    //     { id: 1, title: 'First Post', published: true, authorId: 'John Doe', createdAt: '2024-01-01' },
+    //     { id: 2, title: 'Second Post', published: false, authorId: 'Jane Smith', createdAt: '2024-01-02' },
+    //     // เพิ่มข้อมูลตัวอย่างเพิ่มเติมได้        
+    // ])
+const { data : posts, error} = await useFetch(('http://localhost:3000/api/posts')) 
+console.log('posts = ',posts)
 
     const viewPost = (id: number) => {
         alert(`View post with ID: ${id}`)
@@ -62,7 +62,7 @@
                 <td>{{ post.id }}</td>
                 <td>{{ post.title }}</td>
                 <td>{{ post.published ? 'Yes' : 'No' }}</td>
-                <td>{{ post.author }}</td>
+                <td>{{ post.authorId }}</td>
                 <td>{{ post.createdAt }}</td>
                 <td class="space-x-2">
                 <button class="btn btn-sm btn-primary" @click="viewPost(post.id)">View</button>
