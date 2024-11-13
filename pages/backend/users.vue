@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-const { data : Users, error} = await useFetch(('http://localhost:3000/api/users')) 
+const { data : Users, error} = await useFetch(('/api/users')) 
 console.log('users = ',Users)
 
     const viewUser = (id: number) => {

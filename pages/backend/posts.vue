@@ -5,7 +5,7 @@
     //     { id: 2, title: 'Second Post', published: false, authorId: 'Jane Smith', createdAt: '2024-01-02' },
     //     // เพิ่มข้อมูลตัวอย่างเพิ่มเติมได้        
     // ])
-const { data : posts, error} = await useFetch(('http://localhost:3000/api/posts')) 
+const { data : posts, error} = await useFetch(('/api/posts')) 
 console.log('posts = ',posts)
 
     const viewPost = (id: number) => {
