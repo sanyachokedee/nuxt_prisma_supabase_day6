@@ -6,7 +6,7 @@
     //     // เพิ่มข้อมูลตัวอย่างเพิ่มเติมได้        
     // ])
     
-const { data : posts, error} = await useFetch(process.env.DATABASE_URL+'/api/posts') 
+const { data : posts, error} = await useFetch('/api/posts') 
 console.log('posts = ',posts)
 
     const viewPost = (id: number) => {

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 
-const { data : Users, error} = await useFetch(process.env.DATABASE_URL+'/api/users') 
+const { data : Users, error} = await useFetch('/api/users') 
+
+
 console.log('users = ',Users)
 
     const viewUser = (id: number) => {
